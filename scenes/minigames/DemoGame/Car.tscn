@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://3mbbcpxr112k"]
+
+[ext_resource type="Script" uid="uid://b2axwgu8r88mc" path="res://scenes/minigames/DemoGame/Car.cs" id="1_vrh7r"]
+
+[node name="Car" type="CharacterBody2D" unique_id=556776349]
+script = ExtResource("1_vrh7r")
