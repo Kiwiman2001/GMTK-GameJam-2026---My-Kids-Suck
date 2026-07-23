@@ -4,9 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://b66djmknlocbk" path="res://assets/blue_car_wheel.png" id="2_l0go1"]
 [ext_resource type="Texture2D" uid="uid://criu3m878j812" path="res://assets/blue_car.png" id="3_55let"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1asc"]
-size = Vector2(252, 70.53603)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_r1asc"]
 radius = 18.973665
 
@@ -19,12 +16,6 @@ Camera = NodePath("Body/Camera2D")
 
 [node name="Body" type="RigidBody2D" parent="." unique_id=875199614]
 
-[node name="CollisionBody" type="CollisionShape2D" parent="Body" unique_id=186300667]
-position = Vector2(128, 35.999996)
-rotation = 0.029651143
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_r1asc")
-
 [node name="Sprite2D" type="Sprite2D" parent="Body" unique_id=1319151325]
 texture_filter = 1
 position = Vector2(127, 37)
@@ -34,6 +25,10 @@ flip_h = true
 [node name="Camera2D" type="Camera2D" parent="Body" unique_id=1015527123]
 position = Vector2(500, -250)
 position_smoothing_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Body" unique_id=1613286563]
+position = Vector2(124, 36)
+polygon = PackedVector2Array(-112, -14, -90, -15, -52, -35, 3, -35, 53, -10, 98, -8, 119, -2, 129, 5, 129, 22, 125, 30, 117, 35, 110, 35, 68, 32, -46, 33, -53, 29, -116, 31, -123, 20, -124, 10, -117, -1)
 
 [node name="WheelFront" type="RigidBody2D" parent="." unique_id=553474871]
 position = Vector2(216.5, 64)

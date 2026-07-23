@@ -25,7 +25,7 @@ public partial class TerrainSegment : Node2D
 
 		for (int i = 0; i <= width; i += width / NUM_POINTS)
 		{
-			lastHeight += GD.RandRange(-5, 5);
+			lastHeight += GD.RandRange(-3, 3);
 
 			if (lastHeight > MAX_HEIGHT) { lastHeight = MAX_HEIGHT; }
 			if (lastHeight < MIN_HEIGHT) { lastHeight = MIN_HEIGHT; }
