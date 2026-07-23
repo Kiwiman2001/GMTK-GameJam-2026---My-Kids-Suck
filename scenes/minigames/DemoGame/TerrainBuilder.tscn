@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b15s44q62o1iu"]
+
+[ext_resource type="Script" uid="uid://notivm6leew1" path="res://scenes/minigames/DemoGame/TerrainBuilder.cs" id="1_g70um"]
+[ext_resource type="PackedScene" uid="uid://bnmj38kut32e6" path="res://scenes/minigames/DemoGame/TerrainSegment.tscn" id="2_8yid1"]
+
+[node name="TerrainBuilder" type="Node2D" unique_id=1991340838]
+script = ExtResource("1_g70um")
+TerrainSegment = ExtResource("2_8yid1")

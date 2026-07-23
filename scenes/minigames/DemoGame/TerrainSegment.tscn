@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bnmj38kut32e6"]
+
+[ext_resource type="Script" uid="uid://ct6xi1o4dt0dx" path="res://scenes/minigames/DemoGame/TerrainSegment.cs" id="1_p2svj"]
+[ext_resource type="Script" uid="uid://b43ti3vykqmqj" path="res://scenes/minigames/DemoGame/Ground.cs" id="2_p2svj"]
+
+[node name="TerrainSegment" type="Node2D" unique_id=1960733596 node_paths=PackedStringArray("Ground")]
+script = ExtResource("1_p2svj")
+Ground = NodePath("Ground")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1289185601]
+offset_right = 500.0
+offset_bottom = 648.0
+color = Color(0.27450982, 0.8666667, 0.81960785, 1)
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=572686384 node_paths=PackedStringArray("Poly", "CollisionPoly")]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_p2svj")
+Poly = NodePath("Polygon2D")
+CollisionPoly = NodePath("CollisionPolygon2D")
+
+[node name="Polygon2D" type="Polygon2D" parent="Ground" unique_id=197834272]
+position = Vector2(0, 500)
+color = Color(0.21176471, 0.7882353, 0.25882354, 1)
+polygon = PackedVector2Array(0, 0, 500, 0, 500, 150, 0, 150)
+uv = PackedVector2Array(-107.20001, 1.2000046, 205.59998, 2.800003, 208, 45.999992, -108.79999, 44.4)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground" unique_id=979651919]
+position = Vector2(0, 500)
+build_mode = 1
+polygon = PackedVector2Array(0, 0, 500, 0, 500, 150, 0, 150)

@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://bowi78ak0jt4v"]
 
-[ext_resource type="Script" uid="uid://ctivx4ehkqsw8" path="res://scenes/minigames/DemoGame/DemoGame.cs" id="1_ri12b"]
+[ext_resource type="Script" uid="uid://ctivx4ehkqsw8" path="res://scenes/minigames/DemoGame/DemoGame.cs" id="1_53k1y"]
+[ext_resource type="PackedScene" uid="uid://3mbbcpxr112k" path="res://scenes/minigames/DemoGame/Car.tscn" id="2_8uyla"]
+[ext_resource type="PackedScene" uid="uid://b15s44q62o1iu" path="res://scenes/minigames/DemoGame/TerrainBuilder.tscn" id="3_jb6e3"]
 
-[node name="DemoGame" type="Node2D" unique_id=1539765601]
-script = ExtResource("1_ri12b")
+[node name="DemoGame" type="Node" unique_id=1414185775 node_paths=PackedStringArray("PlayerCar", "TerrainBuilder")]
+script = ExtResource("1_53k1y")
+PlayerCar = NodePath("Car")
+TerrainBuilder = NodePath("TerrainBuilder")
+
+[node name="TerrainBuilder" parent="." unique_id=1991340838 instance=ExtResource("3_jb6e3")]
+
+[node name="Car" parent="." unique_id=1995586169 instance=ExtResource("2_8uyla")]
+position = Vector2(393, 289)
