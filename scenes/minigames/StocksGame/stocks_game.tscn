@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://cudtlmj2cobon"]
 
 [ext_resource type="Script" uid="uid://bu1ojjkpkawr3" path="res://scenes/minigames/StocksGame/StocksGame.cs" id="1_dndxh"]
+[ext_resource type="Texture2D" uid="uid://dpskam6hdyc0n" path="res://assets/Circle.png" id="2_a03l7"]
 
-[node name="StocksGame" type="Node" unique_id=1441599811 node_paths=PackedStringArray("Line", "Player", "Camera")]
+[node name="StocksGame" type="Node" unique_id=1441599811 node_paths=PackedStringArray("Line", "Player", "Camera", "Marker")]
 script = ExtResource("1_dndxh")
 Line = NodePath("Line2D")
 Player = NodePath("Node2D")
 Camera = NodePath("Camera2D")
+Marker = NodePath("Node2D/Sprite2D")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2018843859]
 position = Vector2(500, 324)
@@ -41,4 +43,8 @@ points = PackedVector2Array(0, 0, 0, 650)
 width = 5.0
 default_color = Color(1, 0, 0, 1)
 
-[node name="Marker2D" type="Marker2D" parent="Node2D" unique_id=751534088]
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=2016639050]
+texture_filter = 1
+position = Vector2(0, 324)
+scale = Vector2(0.091953985, 0.091953985)
+texture = ExtResource("2_a03l7")
