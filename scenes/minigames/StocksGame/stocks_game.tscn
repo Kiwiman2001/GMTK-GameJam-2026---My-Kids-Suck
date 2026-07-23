@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cudtlmj2cobon"]
+
+[ext_resource type="Script" uid="uid://bu1ojjkpkawr3" path="res://scenes/minigames/StocksGame/StocksGame.cs" id="1_dndxh"]
+
+[node name="StocksGame" type="Node" unique_id=1441599811 node_paths=PackedStringArray("Line", "Player", "Camera")]
+script = ExtResource("1_dndxh")
+Line = NodePath("Line2D")
+Player = NodePath("Node2D")
+Camera = NodePath("Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2018843859]
+position = Vector2(500, 324)
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D" unique_id=469790903]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 624.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.75686276, 0.57254905, 1)
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1158827244]
+width = 5.0
+
+[node name="Node2D" type="Node2D" parent="." unique_id=222570045]
+position = Vector2(1000, 0)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D" unique_id=1010637557]
+offset_right = 200.0
+offset_bottom = 648.0
+color = Color(0.101960786, 0.75686276, 0.57254905, 1)
+
+[node name="Line2D" type="Line2D" parent="Node2D" unique_id=349602824]
+points = PackedVector2Array(0, 0, 0, 650)
+width = 5.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="Marker2D" type="Marker2D" parent="Node2D" unique_id=751534088]
